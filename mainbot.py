@@ -8,7 +8,7 @@ def create_api():
  ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET') #Access
  
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
- auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
  api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
  api.verify_credentials()
